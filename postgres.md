@@ -28,8 +28,9 @@ SQL stands for Structured Query Language, and it is needed to communicate with d
 | 1   | Strange Town  | 175 |  33 |
 | 2   | Sleepy Hollow | 55  | 199 |
 
-SQL is the language that communicates with a database. An RDBMS is the database system itself. There are two well-known database systens MySQL or PostgreSQL for example.
+SQL is the language that communicates with a database. An RDBMS is the database system itself. There are two well-known database systems MySQL or PostgreSQL for example.
 
+![Server](./images/server.png)
 ---
 
 ## Core Syntax
