@@ -35,4 +35,12 @@ SQL is the language that communicates with a database. An RDBMS is the database 
 
 ## Core Syntax
 
+The syntax in SQL is subdivided into predefined key words,
+these are for example SELECT FROM WHERE.
+The identifiers result from the different columns in the table.
+
 ![Syntax](./images/syntax.jpg)
+
+**Syntax Rules:**
+1. SQL statements must end with a semicolon (if more than one statement in the same command).
+2. SQL statements are case-insensitive. That means *FROM* is the same then *from* (To better identify the keywords, they should still be capitalized).
