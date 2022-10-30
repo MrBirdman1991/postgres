@@ -34,3 +34,5 @@ SQL is the language that communicates with a database. An RDBMS is the database 
 ---
 
 ## Core Syntax
+
+![Syntax](./images/syntax.jpg)
