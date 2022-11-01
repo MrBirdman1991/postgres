@@ -1,1 +1,0 @@
-SELECT "Hellou World";

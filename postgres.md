@@ -2,6 +2,7 @@
 
 - [What is SQL](#what-is-sql)
 - [Core Syntax](#core-syntax)
+- [Data Definition](#data-definition)
 
 ---
 
@@ -10,8 +11,6 @@
 SQL stands for Structured Query Language, and it is needed to communicate with data in a database. SQL is a relational database language.  Besides SQL there are also non-relational database languages like MongoDB for example.
 
 > SQL is typically used for managing data in relational database management systems (RDBMS). In these, data can be stored in a tabular structure. Individual tables can in turn be linked to each other.
-
-
 
 ### **Unicorns:**
 
@@ -31,6 +30,7 @@ SQL stands for Structured Query Language, and it is needed to communicate with d
 SQL is the language that communicates with a database. An RDBMS is the database system itself. There are two well-known database systems MySQL or PostgreSQL for example.
 
 ![Server](./images/server.png)
+
 ---
 
 ## Core Syntax
@@ -42,6 +42,44 @@ The identifiers result from the different columns in the table.
 ![Syntax](./images/syntax.jpg)
 
 **Syntax Rules:**
+
 1. SQL statements must end with a semicolon (if more than one statement in the same command).
 2. SQL statements are case-insensitive. That means *FROM* is the same then *from* (To better identify the keywords, they should still be capitalized).
 3. Identifiers can be surrounded with double quotes to avoid clashes with build-in keywords.
+
+___
+
+## Data Definition
+
+
+When working with databases and tables, the following keywords are important.
+
+- **CREATE** is needed to create a database or table.
+- **ALTER** is needed to update an existing database or table.
+- **DROP** is needed to drop an existing database or table
+
+```SQL
+
+CREATE DATABASE cornify;
+
+```
+> Examples can be taken from the sql folder. The example above can be found [here](./sql/01-create-database.sql) for example. 
+
+## Data Types:
+Data types can differ depending on the RDBMS. In this chapter, the most common data types are discussed. Special data types for PostgreSQL can be looked up [here](https://www.postgresql.org/docs/current/datatype.html), for example.
+
+**The most common data types are:**
+- Character
+- Numeric
+- Date
+
+## Character Types
+
+The character types can be chosen between **CHAR(X)**, **VARCHAR(X)** and **TEXT** (The X indicates how many characters can be stored).
+
+**CHAR(X)** and **VARCHAR(X)** are almost identical. The big difference is that the missing characters in **CHAR(X)** are filled with spaces.
+
+**Text** can be used when a larger amount of text is to be stored. Like a blog post for example. The character type text stores a maximum size of 1GB (PostgreSQL).
+
+Another special character type is the **ENUM**.
+In an ENUM you can specify which concrete text values are allowed. For example: Mr | Mrs | Mx 
