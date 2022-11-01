@@ -56,7 +56,7 @@ When working with databases and tables, the following keywords are important.
 
 - **CREATE** is needed to create a database or table.
 - **ALTER** is needed to update an existing database or table.
-- **DROP** is needed to drop an existing database or table
+- **DROP** is needed to delete an existing database or table
 
 ```SQL
 
@@ -79,7 +79,31 @@ The character types can be chosen between **CHAR(X)**, **VARCHAR(X)** and **TEXT
 
 **CHAR(X)** and **VARCHAR(X)** are almost identical. The big difference is that the missing characters in **CHAR(X)** are filled with spaces.
 
-**Text** can be used when a larger amount of text is to be stored. Like a blog post for example. The character type text stores a maximum size of 1GB (PostgreSQL).
+**TEXT** can be used when a larger amount of text is to be stored. Like a blog post for example. The character type text stores a maximum size of 1GB (PostgreSQL).
 
 Another special character type is the **ENUM**.
 In an ENUM you can specify which concrete text values are allowed. For example: Mr | Mrs | Mx 
+
+## Numeric Types
+All Numeric Types for PostgreSQL can be read [here](https://www.postgresql.org/docs/current/datatype-numeric.html). However, the most important ones are **SMALLINT** and **INTEGER**. As well as **DECIMAL** and **NUMERIC**.
+
+**SMALLINT** and **INTEGER** are numbers without decimal places.
+
+**DECIMAL** and **NUMERIC** are used to store numbers with decimal places.
+
+**REAL** and **DOUBLE** are the same then DECIMAL or NUMERIC. The difference is, that **REAL** and **DOUBLE** have variable-precision that means they are inexact. But therefore much faster performance.
+
+
+## Date Types
+All Date Types for PostgreSQL can be read [here](https://www.postgresql.org/docs/current/datatype-datetime.html).
+The most important date types are **DATE** and **TIMESTAMP**.
+
+**DATE** contains the current date without taking hours or minutes into account. 
+
+**TIMESTAMP** is needed to store hours and minutes with consideration of the time zone.
+
+## Other Types
+Other data types that are often used are **BOOLEAN** (true or false), **JSON** or **XML**.
+
+## What about files?
+Databases are used to store primitive values. That means the path to a certain file can be stored in a database, not the file itself.
