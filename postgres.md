@@ -107,3 +107,12 @@ Other data types that are often used are **BOOLEAN** (true or false), **JSON** o
 
 ## What about files?
 Databases are used to store primitive values. That means the path to a certain file can be stored in a database, not the file itself.
+
+## Time to Practice:
+An example for creating a table can be taken from [this](./sql/02-unicorns-table.sql). file.
+How to create a record can be seen in the example below.
+```SQL
+INSERT INTO unicorns (unicorn_name, salary, unicorn_type) 
+VALUES ('Lazyhorn', 8000, 'magical_one');
+```
+It is important to ensure that the values take into account the correct data type of the respective field. A string as value should always be written in single quotes.
