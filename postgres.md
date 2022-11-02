@@ -3,6 +3,7 @@
 - [What is SQL](#what-is-sql)
 - [Core Syntax](#core-syntax)
 - [Data Definition](#data-definition)
+- [Insert & Querying Data](#insert-and-querying-data)
 
 ---
 
@@ -116,3 +117,26 @@ INSERT INTO unicorns (unicorn_name, salary, unicorn_type)
 VALUES ('Lazyhorn', 8000, 'magical_one');
 ```
 It is important to ensure that the values take into account the correct data type of the respective field. A string as value should always be written in single quotes.
+
+___
+
+
+## Insert and Querying Data
+
+## Insert Data:
+
+With the keyword **INSERT** data can be stored in a database. The keyword **INTO** specifies in which table the data is stored.
+
+The keyword **VALUES** can be used to specify which values are stored in the respective fields.
+
+> **important** The column names in the round brackets before VALUES indicate the order in which the values must be entered.
+
+## Querying Data:
+To query data you can use the keyword **SELECT**.
+Followed by a * as wildcard you will get all fields.
+If you want to query specific fields you can do that by field name.
+With the **From** keyword you can specify the table you want to get out the data.
+
+```SQL
+SELECT (unicorn_name, id) FROM unicorns;
+```

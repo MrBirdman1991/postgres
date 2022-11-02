@@ -7,7 +7,7 @@
             "askForPassword": true,
             "driver": "PostgreSQL",
             "name": "cornify",
-            "database": "cornify",
+            "database": "postgres",
             "username": "postgres"
         }
     ]
