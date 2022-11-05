@@ -84,6 +84,7 @@ The character types can be chosen between **CHAR(X)**, **VARCHAR(X)** and **TEXT
 
 Another special character type is the **ENUM**.
 In an ENUM you can specify which concrete text values are allowed. For example: Mr | Mrs | Mx 
+___
 
 ## Numeric Types
 All Numeric Types for PostgreSQL can be read [here](https://www.postgresql.org/docs/current/datatype-numeric.html). However, the most important ones are **SMALLINT** and **INTEGER**. As well as **DECIMAL** and **NUMERIC**.
@@ -93,7 +94,7 @@ All Numeric Types for PostgreSQL can be read [here](https://www.postgresql.org/d
 **DECIMAL** and **NUMERIC** are used to store numbers with decimal places.
 
 **REAL** and **DOUBLE** are the same then DECIMAL or NUMERIC. The difference is, that **REAL** and **DOUBLE** have variable-precision that means they are inexact. But therefore much faster performance.
-
+___
 
 ## Date Types
 All Date Types for PostgreSQL can be read [here](https://www.postgresql.org/docs/current/datatype-datetime.html).
@@ -103,6 +104,18 @@ The most important date types are **DATE** and **TIMESTAMP**.
 
 **TIMESTAMP** is needed to store hours and minutes with consideration of the time zone.
 
+With the help of the **DEFAULT** keyword, default values can be stored for the respective field. For a date type this can be helpful in combination with the **CURRENT_TIMESTAMP** keyword.
+
+```SQL
+CREATE TABLE conversations (
+    id serial PRIMARY KEY,
+    unicorn_name VARCHAR(200),
+    clan_name VARCHAR(200), 
+    message TEXT,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP 
+)
+```
+___
 ## Other Types
 Other data types that are often used are **BOOLEAN** (true or false), **JSON** or **XML**.
 
